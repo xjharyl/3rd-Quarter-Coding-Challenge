@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Coding Challenge 5
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: lightseagreen;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <h1> Modified FLAMES </h1>
+
+        <button onclick="">Match Names</button>
+        <h3 id="name"></h3>
+
+        <h4>FLAMES Result:</h4>
+        <h3 id="result"></h3>
+
+
+        <script>
+            function flames(name1,name2){
+
+			var names = (name1.length + name2.length)%6
+			
+			switch (names){
+                case 1:
+                    return "Friends";
+                case 2:
+                    return "Lovers";
+                case 3:
+                    return "Aquaintance";
+                case 4:
+                    return "Married";
+                case 5:
+                    return "Enemies";
+                default:
+                    return "Sweethearts";
+            }
+            }
+			
+			var name1 = prompt("Kindly input the name of the first inividual: ");
+			var name2 = prompt("Kindly provide the name of the second individual: ");
+			
+			document.getElementById('result').innerHTML = "The connection or relationship between " + name1 + " and " + name2 + " is " + flames(name1,name2) + ".";
+			
+        </script>
+    </body>
+</html>
